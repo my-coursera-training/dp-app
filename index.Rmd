@@ -45,6 +45,33 @@ The application consist bassically in a main panel, that shows the information a
  * Testing: Remaining valued used to validate the forecast.
 
 ---
+## Difference between model parameters
+
+The plot for some posible configurations of model parameters are shown below:
+
+``` {r echo=F, cache=T, messages = F, fig.width=13.5}
+library(quantmod)
+library(data.table)
+library(forecast)
+load("assets/data/GOOG-google-2008-01-01-2013-12-31.Rdata")
+op_ts <- ts(Op(to.monthly(dat)), frequency = 12)
+ts1Train <- window(op_ts,start=1,end=5)
+ts1Test <- window(op_ts,start=5)
+
+ets_MMM <- ets(ts1Train,model="MMM")
+ets_AAA <- ets(ts1Train,model="AAA")
+ets_ZNN <- ets(ts1Train,model="ZNN")
+fcastMMM <- forecast(ets_MMM)
+fcastAAA <- forecast(ets_AAA)
+fcastZNN <- forecast(ets_ZNN)
+par(mfrow=c(1,3))
+plot(fcastMMM); lines(ts1Test,col="red")
+plot(fcastAAA); lines(ts1Test,col="red")
+plot(fcastZNN); lines(ts1Test,col="red")
+
+```
+
+---
 
 ##  Application Access and source code
 

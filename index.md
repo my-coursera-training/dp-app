@@ -45,6 +45,13 @@ The application consist bassically in a main panel, that shows the information a
  * Testing: Remaining valued used to validate the forecast.
 
 ---
+## Difference between model parameters
+
+The plot for some posible configurations of model parameters are shown below:
+
+![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png)
+
+---
 
 ##  Application Access and source code
 
