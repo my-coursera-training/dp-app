@@ -1,0 +1,7 @@
+name: stock_forecast
+account: my-coursera-training
+server: shinyapps.io
+appId: 85079
+bundleId: 381198
+url: https://my-coursera-training.shinyapps.io/stock_forecast/
+when: 1456481055.12829

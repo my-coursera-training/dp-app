@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stok Forecast</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Stok Forecast">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/prettify/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/style.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Stok Forecast</h1>
+    <h2>Understanding Exponential Smoothing State Space Model</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>About</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This application tries to help in getting a better understanding of the time series forecasting as explained in the lecture <em>forecast</em>, of course <em>Practical Machine Learning</em>, part of the <strong>Data Science specialization</strong>.</p>
+
+<p>The application allows to select several parameters used to get the data form either Google or Yahoo sources, and configure the model used to train the Exponential smoothing state space model. </p>
+
+<p>The landing page of the application, contains a brief description and the usage basics fo the aplication, that can be accessed clicking on &quot;app&quot; tab, in the bar at the top of the page.</p>
+
+<p>Initial configuration is the same than that set on the course lecture, but several parameters can be modified to see how their effect on the results.</p>
+
+<p>There are some other controls that have been included mainly to test shinny app functionality, including the train years selector slider control, that is generated in the server script to allow setting dynamically the maximum allowed value, depending on the selected date range.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Application structure</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The application consist bassically in a main panel, that shows the information about the gathered data, and a sidebar pannel, that holds the user interface controls.</p>
+
+<ul>
+<li><p>Side Panel</p>
+
+<ul>
+<li>Ticker: Symbol of the stock. </li>
+<li>Date Range: Period of time of intered. Initially set as the example in coure lecture.</li>
+<li>ETS model parameters: character string identifying method using the framework terminology of Hyndman et al. (2002) and Hyndman et al. (2008). Initially set as the example in coure lecture(MMM).</li>
+<li>Train years: slider control to select how many of the available years in the downloaded data should be used in ETS model</li>
+<li>Apply Changes Button: Should be clicked when the parameter selection has been updated. Has been set to avoid unnecesary data request to sources when modifying several parameters at once.</li>
+</ul></li>
+<li><p>Main Panel Tabs</p>
+
+<ul>
+<li>Plot: Shows the opening pricesof the selected stock usin in training in a black line the values of the testing set in red, and the moving average in orange. The forecast line is in color blue.</li>
+<li>Accuracy: Accuracy information on the prediction.</li>
+<li>Table: The values downloaded from the source for the given stock and time frame.</li>
+<li>Training: Time serie used in training.</li>
+<li>Testing: Remaining valued used to validate the forecast.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Application Access and source code</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Application access</p>
+
+<ul>
+<li><a href="https://my-coursera-training.shinyapps.io/stock_forecast/">https://my-coursera-training.shinyapps.io/stock_forecast/</a></li>
+</ul></li>
+<li><p>Slide github web pages:</p>
+
+<ul>
+<li><a href="http://my-coursera-training.github.io/dp-app/">http://my-coursera-training.github.io/dp-app/</a></li>
+</ul></li>
+<li><p>Slide source code</p>
+
+<ul>
+<li><a href="https://github.com/my-coursera-training/gh_pages/dp-app">gh_pages branch</a></li>
+</ul></li>
+<li><p>Application code</p>
+
+<ul>
+<li><a href="https://github.com/my-coursera-training/master/dp-app/app/ui.R">ui.R</a></li>
+<li><a href="https://github.com/my-coursera-training/master/dp-app/app/server.R">server.R</a></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='About'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Application structure'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Application Access and source code'>
+         3
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- Google Prettify -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+  <script src='libraries/highlighters/prettify/js/lang-r.js'></script>
+  <script>
+    var pres = document.getElementsByTagName("pre");
+    for (var i=0; i < pres.length; ++i) {
+      pres[i].className = "prettyprint linenums";
+    }
+    prettyPrint();
+  </script>
+  <!-- End Google Prettify --> 
+  </html>

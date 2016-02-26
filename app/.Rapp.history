@@ -1,0 +1,8 @@
+load("/Users/ill/coursera/datasciencecoursera/courses/9.- Developing Data Products/project/app/GOOG-2008-01-01-2015-12-31.Rdata")
+ls()
+dat
+12*.8
+load("/Users/ill/coursera/datasciencecoursera/courses/9.- Developing Data Products/project/app/GOOG-google-2008-01-01-2013-12-31.Rdata")
+dat
+qiut()
+quit()

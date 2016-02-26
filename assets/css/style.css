@@ -1,0 +1,32 @@
+article p, section p, section li {
+    font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond', 'Palatino', sans-serif;
+    text-align: justify;
+    font-size: 22px;
+    line-height: 1.5em;
+    color: #444;
+}
+
+article li {
+    font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond', 'Palatino', sans-serif;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.1em;
+    color: #444;
+}
+
+.title-slide {
+    background-image: url("../img/title.png");
+    background-size: 70%;
+    background-color: #DDE6DD;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 10%;
+}
+
+.title-slide hgroup {
+    bottom: 50px;
+}
+
+slides > slide:not(.nobackground):after {
+  display:none;
+}
