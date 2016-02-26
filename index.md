@@ -55,9 +55,9 @@ The application consist bassically in a main panel, that shows the information a
  * http://my-coursera-training.github.io/dp-app/
 
 * Slide source code
-  * <a href="https://github.com/my-coursera-training/gh_pages/dp-app">gh_pages branch</a>
+  * <a href="https://github.com/my-coursera-training/dp-app/tree/gh-pages">gh-pages branch</a>
 
 * Application code
-  * <a href="https://github.com/my-coursera-training/master/dp-app/app/ui.R">ui.R</a>
-  * <a href="https://github.com/my-coursera-training/master/dp-app/app/server.R">server.R</a>
+  * <a href="https://github.com/my-coursera-training/dp-app/blob/master/app/ui.R">ui.R</a>
+  * <a href="https://github.com/my-coursera-training/dp-app/blob/master/app/server.R">server.R</a>
 
